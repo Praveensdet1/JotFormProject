@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testCases.JotForm">
+      <class name="com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields">
         <methods>
           <include name="testJotFormApp"/>
         </methods>
-      </class> <!-- com.testCases.JotForm -->
+      </class> <!-- com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

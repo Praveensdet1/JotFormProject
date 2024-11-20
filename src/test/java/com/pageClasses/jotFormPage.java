@@ -4,9 +4,11 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -20,13 +22,13 @@ public WebDriver driver;
 	public jotFormPage(WebDriver driver)
 	{
 		this.driver=driver;
-		PageFactory.initElements(driver,this); // MANDATORY
+		PageFactory.initElements(driver,this); 
 	}
 	
 	//Locators 
 
 	
-	@FindBy(xpath="//li[@aria-label='Login']")  
+	@FindBy(xpath="//*[@type=\"button\" and .='Login']")  
 	WebElement LoginBtn;
 	
 	@FindBy(id="username")  
@@ -112,8 +114,19 @@ public WebDriver driver;
 	@FindBy(xpath="//*[.='Copy Link']")
 	WebElement CopyLink;
 	
+	@FindBy(id="sidebar-field")
+	WebElement settingsOptions;
+	
+	@FindBy(id="options")
+	WebElement enterOptions;
+	
 	@FindBy(xpath="//*[.='Open in new tab']")
 	WebElement OpenInNewTab;
+	
+	@FindBy(xpath="//button[.=\"Continue\"][2]")
+	WebElement formSubmit;
+	
+	
 	
 	
 	
@@ -225,6 +238,22 @@ public WebDriver driver;
 		OpenInNewTab.click();
 	}
 	
+	public void submitForm() {
+		formSubmit.click();
+	
+	}
+	
+	public void provideTheOptions()
+	{
+		
+		settingsOptions.click();
+		enterOptions.sendKeys("india");
+		enterOptions.sendKeys(Keys.ENTER);
+		enterOptions.sendKeys("america");
+		enterOptions.sendKeys(Keys.ENTER);
+		enterOptions.sendKeys("china");
+		
+	}
 	
 }
 

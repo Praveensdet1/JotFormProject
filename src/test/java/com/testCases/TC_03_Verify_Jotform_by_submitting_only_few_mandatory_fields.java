@@ -6,47 +6,39 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.pageClasses.formFillingPage;
 import com.pageClasses.jotFormPage;
 
 
 
-public class JotForm{
+public class TC_03_Verify_Jotform_by_submitting_only_few_mandatory_fields{
 
 	public WebDriver driver;
 
 	@Test
 	public void testJotFormApp() throws InterruptedException {
 		
-		 driver = new ChromeDriver();//initialize chrome driver
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();//maximize the window
+		driver.manage().window().maximize();
 		driver.get("https://www.jotform.com/");
 		Thread.sleep(5000);
 	
 		
-		
-		/*driver.findElement(By.xpath("//li[@aria-label='Login']")).click();
-		driver.findElement(By.id("username")).sendKeys("praveenreddy2531@gmail.com");
-		driver.findElement(By.id("password")).sendKeys("Praveen7013@");
-		driver.findElement(By.id("signinButton")).click();
-		*/
-		
 		jotFormPage pg = new jotFormPage(driver);
+		formFillingPage fg = new formFillingPage(driver);
 		//pg.launchApplication();
 		pg.loginToApplication();
-		Thread.sleep(10000);
-		driver.switchTo().frame(driver.findElement(By.xpath("//*[@title=\"reCAPTCHA\"]")));
-		Thread.sleep(5000);
-		driver.findElement(By.id("recaptcha-anchor-label")).click();
-		driver.findElement(By.id("signinButton")).click();
 		Thread.sleep(5000);
 		pg.clickOnCreateForm();
 		pg.clickOnStartFromScratch();
@@ -57,18 +49,20 @@ public class JotForm{
 		pg.clickOnHeader();
 		pg.clickOnHeaderSettings();
 		pg.clearInputText();
-		pg.ChangeFieldName("StudentRegistrationForm");
+		pg.ChangeFieldName("STUDENT REGISTRATION FORM");
 		pg.closeSettingsIcon();
+		pg.clickOnAddFormElement();
 		
 		Thread.sleep(3000);
-	/*
+	
 		pg.clickOnFullName();
 		Thread.sleep(3000);
 		pg.clickOnSettingsIcon();
 		pg.clearInputText();
-		pg.ChangeFieldName("FUllNAME");
+		pg.ChangeFieldName("FULL NAME");
 		pg.clickOnMandataryField();
 		pg.closeSettingsIcon();
+		pg.clickOnAddFormElement();
 		
 		Thread.sleep(3000);
 		
@@ -79,6 +73,7 @@ public class JotForm{
 		pg.ChangeFieldName("EMAIL");
 		pg.clickOnMandataryField();
 		pg.closeSettingsIcon();
+		pg.clickOnAddFormElement();
 		
 		Thread.sleep(3000);
 		
@@ -89,6 +84,7 @@ public class JotForm{
 		pg.ChangeFieldName("PHONE");
 		pg.clickOnMandataryField();
 		pg.closeSettingsIcon();
+		pg.clickOnAddFormElement();
 		
 		Thread.sleep(3000);
 		
@@ -96,9 +92,10 @@ public class JotForm{
 		Thread.sleep(3000);
 		pg.clickOnSettingsIcon();
 		pg.clearInputText();
-		pg.ChangeFieldName("BIRTHDATE");
+		pg.ChangeFieldName("BIRTH DATE");
 		pg.clickOnMandataryField();
 		pg.closeSettingsIcon();
+		pg.clickOnAddFormElement();
 		
 		Thread.sleep(3000);
 		
@@ -109,6 +106,7 @@ public class JotForm{
 		pg.ChangeFieldName("COUNTRY");
 		pg.clickOnMandataryField();
 		pg.closeSettingsIcon();
+		pg.clickOnAddFormElement();
 		
 		Thread.sleep(3000);
 		
@@ -119,6 +117,7 @@ public class JotForm{
 		pg.ChangeFieldName("GENDER");
 		pg.clickOnMandataryField();
 		pg.closeSettingsIcon();
+		pg.clickOnAddFormElement();
 		
 		Thread.sleep(3000);
 		
@@ -126,9 +125,10 @@ public class JotForm{
 		Thread.sleep(3000);
 		pg.clickOnSettingsIcon();
 		pg.clearInputText();
-		pg.ChangeFieldName("LANGUAGESKNOWN");
+		pg.ChangeFieldName("LANGUAGES KNOWN");
 		pg.clickOnMandataryField();
 		pg.closeSettingsIcon();
+		pg.clickOnAddFormElement();
 		
 		Thread.sleep(3000);
 		
@@ -136,9 +136,10 @@ public class JotForm{
 		Thread.sleep(3000);
 		pg.clickOnSettingsIcon();
 		pg.clearInputText();
-		pg.ChangeFieldName("UPLOADIMAGE");
+		pg.ChangeFieldName("UPLOAD IMAGE");
 		pg.clickOnMandataryField();
 		pg.closeSettingsIcon();
+		pg.clickOnAddFormElement();
 		
 		Thread.sleep(3000);
 		
@@ -149,6 +150,7 @@ public class JotForm{
 		pg.ChangeFieldName("ADDRESS");
 		pg.clickOnMandataryField();
 		pg.closeSettingsIcon();
+		pg.clickOnAddFormElement();
 		
 		Thread.sleep(3000);
 		
@@ -159,7 +161,8 @@ public class JotForm{
 		pg.ChangeFieldName("SIGNATURE");
 		pg.clickOnMandataryField();
 		pg.closeSettingsIcon();
-	*/
+		pg.clickOnAddFormElement();
+	
 		Thread.sleep(5000);
 		 System.out.println(driver.getCurrentUrl());
 		
@@ -175,9 +178,9 @@ public class JotForm{
 	   
 	   //code to navigate to another window and fill the form
 		
-Set<String> windowIDs=driver.getWindowHandles();
+       Set<String> windowIDs=driver.getWindowHandles();
 		
-		//Appoach1
+		
 		List<String> windowList=new ArrayList(windowIDs);
 		
 		String parentID=windowList.get(0);
@@ -194,10 +197,26 @@ Set<String> windowIDs=driver.getWindowHandles();
 		//switch to child window
 		driver.switchTo().window(childID);
 		
+		Thread.sleep(10000);
 		
-		driver.findElement(By.id("input_2")).click();
+		fg.enterfirstname();
+		fg.enterlasttname();
+		fg.enterEmail();
+		
+		//3) scroll page till end of the page.
+	    JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		
+		
+		pg.submitForm();
 		Thread.sleep(3000);
 		
+		String erroscount = driver.findElement(By.xpath("(//*[.='8'])[1]")).getText();
+		System.out.print(erroscount);
+		Assert.assertEquals(erroscount, "8");
+		
+		Thread.sleep(3000);
+		driver.quit();		
         
 	    
 		
