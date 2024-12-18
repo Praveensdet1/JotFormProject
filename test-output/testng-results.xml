@@ -2,34 +2,34 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-20T10:07:14 IST" name="Default suite" finished-at="2024-11-20T10:10:58 IST" duration-ms="224504">
+  <suite started-at="2024-12-18T12:19:11 IST" name="Default suite" finished-at="2024-12-18T12:22:13 IST" duration-ms="182036">
     <groups>
     </groups>
-    <test started-at="2024-11-20T10:07:14 IST" name="Default test" finished-at="2024-11-20T10:10:58 IST" duration-ms="224504">
+    <test started-at="2024-12-18T12:19:11 IST" name="Default test" finished-at="2024-12-18T12:22:13 IST" duration-ms="182036">
       <class name="com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields">
-        <test-method signature="testJotFormApp()[pri:0, instance:com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields@239b0f9d]" started-at="2024-11-20T10:07:14 IST" name="testJotFormApp" finished-at="2024-11-20T10:10:58 IST" duration-ms="224431" status="FAIL">
+        <test-method signature="testJotFormApp()[pri:0, instance:com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields@239b0f9d]" started-at="2024-12-18T12:19:11 IST" name="testJotFormApp" finished-at="2024-12-18T12:22:13 IST" duration-ms="181980" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='input_5_null']"}
-  (Session info: chrome=131.0.6778.85)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='input_11_addr_line1']"}
+  (Session info: chrome=131.0.6778.140)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [751dbb27c526d36f273852309bcbb35e, findElement {value=//input[@id='input_5_null'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.85, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\NIMMAK~1.RED\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63856/devtoo..., se:cdpVersion: 131.0.6778.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 751dbb27c526d36f273852309bcbb35e]]>
+Command: [0c50d9c47577b46f6605cc9aaf3944af, findElement {using=xpath, value=//*[@id='input_11_addr_line1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\NIMMAK~1.RED\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50586}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50586/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0c50d9c47577b46f6605cc9aaf3944af]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='input_5_null']"}
-  (Session info: chrome=131.0.6778.85)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='input_11_addr_line1']"}
+  (Session info: chrome=131.0.6778.140)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [751dbb27c526d36f273852309bcbb35e, findElement {value=//input[@id='input_5_null'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.85, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\NIMMAK~1.RED\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63856}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63856/devtoo..., se:cdpVersion: 131.0.6778.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 751dbb27c526d36f273852309bcbb35e
+Command: [0c50d9c47577b46f6605cc9aaf3944af, findElement {using=xpath, value=//*[@id='input_11_addr_line1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\NIMMAK~1.RED\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50586}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50586/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0c50d9c47577b46f6605cc9aaf3944af
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -56,9 +56,9 @@ at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.ja
 at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
 at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:702)
 at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:461)
-at com.pageClasses.formFillingPage.moveToElement(formFillingPage.java:89)
-at com.pageClasses.formFillingPage.enterPhone(formFillingPage.java:105)
-at com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields.testJotFormApp(TC_01_Verify_Jotform_by_submitting_all_mandatory_fields.java:216)
+at com.pageClasses.formFillingPage.moveToElement(formFillingPage.java:102)
+at com.pageClasses.formFillingPage.enteraddress(formFillingPage.java:130)
+at com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields.testJotFormApp(TC_01_Verify_Jotform_by_submitting_all_mandatory_fields.java:211)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)

@@ -35,40 +35,40 @@ public WebDriver driver;
 	@FindBy(xpath="//input[@id='input_4']")
 	WebElement email;
 	
-	@FindBy(xpath="//input[@id='input_5_null']")
+	@FindBy(xpath="//input[@id='input_5_full']")
 	WebElement phone;
 	
 	@FindBy(xpath="//input[@id='lite_mode_6']")
 	WebElement date;
 	
-	@FindBy(xpath="//input[@id='input_7']")
+	@FindBy(xpath="//*[@id='input_7']")
 	WebElement dropdownselect;
 	
 	
-	@FindBy(xpath="//input[@id='label_input_8_0']")
+	@FindBy(xpath="//*[@id='label_input_8_0']")
 	WebElement singlechoice;
 	
 	
-	@FindBy(xpath="//input[@id='label_input_9_0']")
+	@FindBy(xpath="//*[@id='label_input_9_0']")
 	WebElement multichoice1;
 	
 
-	@FindBy(xpath="//input[@id='label_input_9_1']")
+	@FindBy(xpath="//*[@id='label_input_9_1']")
 	WebElement multichoice2;
 	
 
-	@FindBy(xpath="//input[@id='label_input_9_2']")
+	@FindBy(xpath="//*[@id='label_input_9_2']")
 	WebElement multichoice3;
 	
 
-	@FindBy(xpath="//input[@id='label_input_9_3']")
+	@FindBy(xpath="//*[@id='label_input_9_3']")
 	WebElement multichoice4;
 	
 	
-	@FindBy(xpath="//input[@id='input_10']")
+	@FindBy(xpath="//*[@id='input_10']")
 	WebElement fileupload;
 	
-	@FindBy(id="input_11_addr_line1']")
+	@FindBy(xpath="//*[@id='input_11_addr_line1']")
 	WebElement streetaddress;
 	
 	@FindBy(xpath="//input[@id='input_11_addr_line2']")
@@ -83,7 +83,7 @@ public WebDriver driver;
 	@FindBy(xpath="//input[@id='input_11_postal']")
 	WebElement zipcode;
 	
-	@FindBy(xpath="//input[@id='sig_pad_12']")
+	@FindBy(xpath="//*[@id='sig_pad_12']")
 	WebElement signature;
 		
 	@FindBy(xpath="//*[text()='Your submission has been received.']")
@@ -100,7 +100,10 @@ public WebDriver driver;
 	public void moveToElement(WebElement data) {
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();", data);
-		
+	}
+	public void moveToElement() {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,200)", "");
 	}
 	public void enterfirstname() {
 		
@@ -115,11 +118,11 @@ public WebDriver driver;
 	}
 	public void enterPhone() {
 
-		moveToElement(phone);
+		moveToElement();
 		phone.sendKeys("7013869139");
 	}
 	public void enterdate() {
-		moveToElement(date);
+		moveToElement();
 		date.sendKeys("09/09/2024");
 	}
 	public void enteraddress()
@@ -137,19 +140,21 @@ public WebDriver driver;
 	}
 	public void entersignature()
 	{
-		moveToElement(signature);
+		moveToElement();
 		signature.click();
 		
 	}
 	
 	public void selectOptionFromDropdown() {
-		moveToElement(dropdownselect);
+		moveToElement();
+		dropdownselect.click();
 		Select dropdown = new Select(dropdownselect);
-		dropdown.selectByIndex(0);
+		dropdown.selectByValue("india");;
 	}
 	
 	public void uploadTheFile() {
-		moveToElement(fileupload);
+		moveToElement();
+		fileupload.click();
 		fileupload.sendKeys("C:\\Users\\nimmakayala.reddy\\Downloads\\files\\AADHAR");
 	}
 	
@@ -185,5 +190,6 @@ public WebDriver driver;
 		boolean actual =confirmMessage.isDisplayed();
 		Assert.assertEquals(actual, true);
 		
+	
 	}
 }

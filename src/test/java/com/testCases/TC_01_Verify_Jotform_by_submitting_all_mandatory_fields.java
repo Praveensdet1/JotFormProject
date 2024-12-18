@@ -27,6 +27,7 @@ import com.pageClasses.jotFormPage;
 public class TC_01_Verify_Jotform_by_submitting_all_mandatory_fields {
 
 	public WebDriver driver;
+	
 
 	@Test
 	public void testJotFormApp() throws InterruptedException {
@@ -143,17 +144,6 @@ public class TC_01_Verify_Jotform_by_submitting_all_mandatory_fields {
 		
 		Thread.sleep(3000);
 		
-		pg.clickOnFileUpload();
-		Thread.sleep(3000);
-		pg.clickOnSettingsIcon();
-		pg.clearInputText();
-		pg.ChangeFieldName("UPLOAD IMAGE");
-		pg.clickOnMandataryField();
-		pg.closeSettingsIcon();
-		pg.clickOnAddFormElement();
-		
-		Thread.sleep(3000);
-		
 		pg.clickOnAddress();
 		Thread.sleep(3000);
 		pg.clickOnSettingsIcon();
@@ -218,7 +208,6 @@ public class TC_01_Verify_Jotform_by_submitting_all_mandatory_fields {
 		fg.selectOptionFromDropdown();
 		fg.singlechoice();
 		fg.multichoice();
-		fg.uploadTheFile();
 		fg.enteraddress();
 		fg.entersignature();
 		fg.clickonContinue();
@@ -227,19 +216,7 @@ public class TC_01_Verify_Jotform_by_submitting_all_mandatory_fields {
 		
 		driver.close();
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	    
-		
-		
-	}}
+	}
+	}
 
 

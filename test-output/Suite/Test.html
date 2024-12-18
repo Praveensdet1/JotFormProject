@@ -55,13 +55,13 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Oct 02 22:19:35 IST 2024</td>
+<td>Started on:</td><td>Wed Dec 18 11:30:05 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>349 seconds (349030 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7168 ms)</td>
 </tr><tr>
-<td>Included groups:</td><td></td>
+<td>Included groups:</td><td>sanity </td>
 </tr><tr>
 <td>Excluded groups:</td><td></td>
 </tr>
@@ -76,16 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.testCases.TC_03_Verify_Jotform_by_submitting_only_few_mandatory_fields.testJotFormApp()'><b>testJotFormApp</b><br>Test class: com.testCases.TC_03_Verify_Jotform_by_submitting_only_few_mandatory_fields</td>
-<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=128.0.6613.138)
+<td title='com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields.test()'><b>test</b><br>Test class: com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields</td>
+<td><div><pre>org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=131.0.6778.140)
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2a11cd541d16c45f6853974ce74d1683, findElement {using=xpath, value=//li[@aria-label=&apos;Login&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\NIMMAK~1.RED\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52005}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52005/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2a11cd541d16c45f6853974ce74d1683
+Command: [6708a83660c6c9ba181a77392d4505fd, clickElement {id=f.69C339AA9E0664CCF63102CD886FD903.d.7A44B286E2BAEBDFCF2C8100E2938C8F.e.41}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\NIMMAK~1.RED\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63402}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63402/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6708a83660c6c9ba181a77392d4505fd)] -&gt; xpath: //*[@id=&apos;input_10&apos;]]
+Session ID: 6708a83660c6c9ba181a77392d4505fd
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -93,26 +93,23 @@ Session ID: 2a11cd541d16c45f6853974ce74d1683
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-	at com.pageClasses.jotFormPage.loginToApplication(jotFormPage.java:139)
-	at com.testCases.TC_03_Verify_Jotform_by_submitting_only_few_mandatory_fields.testJotFormApp(TC_03_Verify_Jotform_by_submitting_only_few_mandatory_fields.java:39)
+	at com.pageClasses.formFillingPage.demo(formFillingPage.java:196)
+	at com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields.test(TC_01_Verify_Jotform_by_submitting_all_mandatory_fields.java:239)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1829496747", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1829496747'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=128.0.6613.138)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace438873841", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace438873841'><pre>org.openqa.selenium.InvalidArgumentException: invalid argument
+  (Session info: chrome=131.0.6778.140)
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2a11cd541d16c45f6853974ce74d1683, findElement {using=xpath, value=//li[@aria-label=&apos;Login&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\NIMMAK~1.RED\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52005}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52005/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2a11cd541d16c45f6853974ce74d1683
+Command: [6708a83660c6c9ba181a77392d4505fd, clickElement {id=f.69C339AA9E0664CCF63102CD886FD903.d.7A44B286E2BAEBDFCF2C8100E2938C8F.e.41}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\NIMMAK~1.RED\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63402}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63402/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6708a83660c6c9ba181a77392d4505fd)] -&gt; xpath: //*[@id=&apos;input_10&apos;]]
+Session ID: 6708a83660c6c9ba181a77392d4505fd
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -123,15 +120,14 @@ Session ID: 2a11cd541d16c45f6853974ce74d1683
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-	at com.pageClasses.jotFormPage.loginToApplication(jotFormPage.java:139)
-	at com.testCases.TC_03_Verify_Jotform_by_submitting_only_few_mandatory_fields.testJotFormApp(TC_03_Verify_Jotform_by_submitting_only_few_mandatory_fields.java:39)
+	at com.pageClasses.formFillingPage.demo(formFillingPage.java:196)
+	at com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields.test(TC_01_Verify_Jotform_by_submitting_all_mandatory_fields.java:239)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -159,83 +155,8 @@ Session ID: 2a11cd541d16c45f6853974ce74d1683
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>10</td>
-<td>com.testCases.TC_03_Verify_Jotform_by_submitting_only_few_mandatory_fields@150ab4ed</td></tr>
-<tr>
-<td title='com.testCases.TC_02_Verify_Jotform_without_submitting_any_fields.testJotFormApp()'><b>testJotFormApp</b><br>Test class: com.testCases.TC_02_Verify_Jotform_without_submitting_any_fields</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //*[@aria-label=&apos;CANCEL&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-	at com.pageClasses.jotFormPage.clickOnCloseIcon(jotFormPage.java:158)
-	at com.testCases.TC_02_Verify_Jotform_without_submitting_any_fields.testJotFormApp(TC_02_Verify_Jotform_without_submitting_any_fields.java:44)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1869373559", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1869373559'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //*[@aria-label=&apos;CANCEL&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-	at com.pageClasses.jotFormPage.clickOnCloseIcon(jotFormPage.java:158)
-	at com.testCases.TC_02_Verify_Jotform_without_submitting_any_fields.testJotFormApp(TC_02_Verify_Jotform_without_submitting_any_fields.java:44)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>63</td>
-<td>com.testCases.TC_02_Verify_Jotform_without_submitting_any_fields@a8c1f44</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields.testJotFormApp()'><b>testJotFormApp</b><br>Test class: com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields</td>
-<td></td>
-<td>275</td>
-<td>com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields@5b057c8c</td></tr>
+<td>7</td>
+<td>com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields@4f2c9ba6</td></tr>
 </table><p>
 </body>
 </html>

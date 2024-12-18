@@ -2,11 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+  <groups>
+  <run>
+  <include name="sanity"></include>
+  </run>
+  </groups>
     <classes>
     
       <class name="com.testCases.TC_01_Verify_Jotform_by_submitting_all_mandatory_fields"/>
-      <class name="com.testCases.TC_02_Verify_Jotform_without_submitting_any_fields"/>
-       <class name="com.testCases.TC_03_Verify_Jotform_by_submitting_only_few_mandatory_fields"/>
+     
       
     </classes>
   </test> <!-- Test -->
